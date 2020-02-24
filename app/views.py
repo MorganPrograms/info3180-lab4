@@ -48,7 +48,6 @@ def upload():
     if request.method == 'POST' and Upload.validate_on_submit():
         # Get file data and save to your uploads folder
         file = Upload.file.data
-        description = Upload.description.data
         filename = secure_filename(file.filename)
         print(filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'],filename))
