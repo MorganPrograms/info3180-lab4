@@ -94,7 +94,7 @@ def get_uploaded_images():
     for subdir, dirs, files in os.walk(rootdir + r'\app\static\uploads'):
         for file in files:
             f.append(file)
-    return f[2:]
+    return f[1:]
     
 def flash_errors(form):
     for field, errors in form.errors.items():
